@@ -1,0 +1,27 @@
+[package]
+name = "semantic-scraper"
+version = "0.1.0"
+edition = "2021"
+
+description = "Webpage scraping"
+keywords = ["html", "scraping"]
+
+authors = ["Jens Breitbart <jbreitbart@gmail.com>"]
+license = "MIT OR Apache-2.0"
+
+repository = "https://github.com/jbreitbart/semantic-scraper"
+readme = "README.md"
+
+exclude = ["tests/"]
+
+[dependencies]
+url = "2.5.0"
+scraper = "0.18.1"
+itertools = "0.12.0"
+
+[dev-dependencies] # also used by the examples
+clap = { version = "4.4.12", features = ["derive"] }
+reqwest = { version = "0.11.23", features = ["blocking"] }
+
+[[example]]
+name = "urlscraper"
